@@ -40,12 +40,27 @@ console.log(JSON.stringify(trades));
 var result = await EtherMiumApi.placeLimitOrder(
 	'BUY', // side BUY or SELL 
 	'0.000054', // price
-	'100000', // quantity
+	'123.45', // quantity
 	'0x6c6EE5e31d828De241282B9606C8e98Ea48526E2', // HOT token address
 	18, // HOT decimals
 	'0x0000000000000000000000000000000000000000', // ETH address
 	18 // ETH decimals
 );
+console.log(JSON.stringify(result));
+
+// cancelling an order
+var result = await EtherMiumApi.cancelTokenOrder('<orderHash>');
+console.log(JSON.stringify(result));
+
+
+// withdrawing HOT
+var result = await EtherMiumApi.withdraw(
+	'0x6c6EE5e31d828De241282B9606C8e98Ea48526E2', // HOT token address
+	18, // HOT token decimals
+	'123.45' // quantity to withdraw
+);
+console.log(JSON.stringify(result));
+
 
 ```
 
