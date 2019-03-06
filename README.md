@@ -28,6 +28,25 @@ console.log(JSON.stringify(active_orders));
 // getting balances
 var balances = await EtherMiumApi.getMyBalance();
 console.log(JSON.stringify(balances));
+
+
+// getting your trades
+var trades = await EtherMiumApi.getMyTokenTrades();
+console.log(JSON.stringify(trades));
+
+
+
+// placing a BUY limit order for HOT/ETH
+var result = await EtherMiumApi.placeLimitOrder(
+	'BUY', 
+	'0.000054', 
+	'100000', 
+	'0x6c6EE5e31d828De241282B9606C8e98Ea48526E2', 
+	18, 
+	'0x0000000000000000000000000000000000000000', 
+	18
+);
+
 ```
 
 
