@@ -37,10 +37,11 @@ class EtherMiumApi {
 		
 	}
 
-	init(privateKey, web3Url = null, contract_address = null)
+	init(privateKey, walletAddress, web3Url = null, contract_address = null)
 	{
 		this.web3 = new Web3(this.web3url);	
 		this.privateKey = privateKey;
+		this.walletAddress = walletAddress;
 
 		if (contract_address != null)
 		{
