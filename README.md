@@ -23,6 +23,11 @@ console.log(JSON.stringify(ob));
 // getting all active orders
 var active_orders = await EtherMiumApi.getMyTokenOrders();
 console.log(JSON.stringify(active_orders));
+
+
+// getting balances
+var balances = await EtherMiumApi.getMyBalance();
+console.log(JSON.stringify(balances));
 ```
 
 
