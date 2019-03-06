@@ -2,10 +2,13 @@
 
 Download the `EtherMium.js` file and add it to your node.js project.
 
+Check `example.js` for an example of a market making bot using the wrapper.
+
+### Demo 
 ```javascript
 const EtherMiumApi = require('./EtherMium.js');
 
-EtherMiumApi.init('<private key>', '<wallet address>'');
+EtherMiumApi.init('<private key>', '<wallet address>');
 
 // getting tickers
 var tickers = await EtherMiumApi.getTickers();
@@ -22,4 +25,4 @@ var active_orders = await EtherMiumApi.getMyTokenOrders();
 console.log(JSON.stringify(active_orders));
 ```
 
-Check `example.js` for an example of a market making bot using the wrapper.
+
